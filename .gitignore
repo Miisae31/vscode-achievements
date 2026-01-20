@@ -1,0 +1,7 @@
+node_modules/
+out/
+dist/
+.vscode-test/
+.vscode-dev-user/
+.vscode-dev-extensions/
+*.vsix

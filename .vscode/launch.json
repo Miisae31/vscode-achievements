@@ -1,0 +1,36 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+	  {
+		// 1) MÍNIMA: carga la extensión y abre el Host (aunque no abra carpeta)
+		"name": "Run Extension (minimal)",
+		"type": "extensionHost",
+		"request": "launch",
+		"runtimeExecutable": "${execPath}",
+		"args": [
+		  "--extensionDevelopmentPath=${workspaceFolder}"
+		],
+		"outFiles": [
+		  "${workspaceFolder}/out/**/*.js"
+		],
+		"preLaunchTask": "${defaultBuildTask}"
+	  },
+	  {
+		// 2) CON PLAYGROUND: carga la extensión y abre el Host en la carpeta playground
+		"name": "Run Extension (playground)",
+		"type": "extensionHost",
+		"request": "launch",
+		"runtimeExecutable": "${execPath}",
+		"args": [
+		  "--disable-extensions",
+		  "--extensionDevelopmentPath=${workspaceFolder}",
+		  "${workspaceFolder}/playground"
+		],
+		"outFiles": [
+		  "${workspaceFolder}/out/**/*.js"
+		],
+		"preLaunchTask": "${defaultBuildTask}"
+	  }
+	]
+  }
+  
